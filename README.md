@@ -32,3 +32,54 @@ To get started, clone the repository and set up the required environment. We rec
 git clone [https://github.com/your-username/competency-gaps.git](https://github.com/your-username/competency-gaps.git)
 cd competency-gaps
 pip install -r requirements.txt
+```
+
+Follow the documentation within each module to run the analysis pipeline. You can start with the [Competency Gap Calculation](cg_calculation/) module.
+
+## Reproducing Paper Results
+
+To reproduce the results from our paper, you will need the models, SAEs, and benchmark datasets used in our experiments.
+
+<details>
+<summary><b>Models & Sparse Autoencoders (SAEs)</b></summary>
+
+* **Llama3.1-8B-Instruct** with the [Goodfire SAE](https://huggingface.co/Goodfire/sae-llama3.1-8b-instruct-layer-19) (Layer 19)
+* **Gemma2-2B-Instruct** with the [Gemma Scope SAE](https://huggingface.co/google/gemma-2-2b-it-sae) (Layer 20, residual stream)
+
+</details>
+
+<details>
+<summary><b>Benchmarks</b></summary>
+
+Our analysis spans ten diverse benchmarks. Please refer to their official sources for access:
+
+* **Factuality:** [Natural Questions](https://ai.google.com/research/NaturalQuestions), [Vectara](https://github.com/vectara/hallucination-leaderboard)
+* **Math:** [GSM8K](https://github.com/openai/grade-school-math), [MATH](https://github.com/hendrycks/math)
+* **Reasoning:** [AGI Eval](https://github.com/microsoft/AGIEval), [LogicBench](https://github.com/google-research-datasets/LogicBench), [SocialIQA](https://maartens.page/socialiqa), [WinoGrande](https://winogrande.allenai.org/)
+* **Ethics & Bias:** [BBQ](https://github.com/nyu-mll/BBQ), [CrowS-Pairs](https://github.com/nyu-mll/crows-pairs)
+
+</details>
+
+<details>
+<summary><b>Pre-computed Data</b></summary>
+
+> We provide the pre-computed concept activations and performance scores for both models across all ten benchmarks to facilitate easier reproduction and extension of our work.
+
+| Model                  | Concept Activations | Gap Scores        | Web Tool Data     |
+| :--------------------- | :-----------------: | :---------------: | :---------------: |
+| Llama3.1-8B-Instruct   |  [↓ Download](TBD)  | [↓ Download](TBD) | [↓ Download](TBD) |
+| Gemma2-2B-Instruct     |  [↓ Download](TBD)  | [↓ Download](TBD) | [↓ Download](TBD) |
+
+</details>
+
+## Citation
+
+If you find our work useful, please consider citing our paper.
+
+```bibtex
+@inproceedings{tbd2026competencygaps,
+  title={Uncovering Competency Gaps in Large Language Models and Their Benchmarks},
+  author={TBD},
+  booktitle={TBD},
+  year={TBD}
+}

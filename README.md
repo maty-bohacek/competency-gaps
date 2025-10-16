@@ -1,6 +1,6 @@
 # Uncovering Competency Gaps in Large Language Models and Their Benchmarks
 
-#### Anonymous Authors
+#### [Maty Bohacek](https://www.matybohacek.com), [Nino Scherrer](https://ninodimontalcino.github.io), [Nicholas Dufour](), [Thomas Leung](), [Christoph Bregler](), [Stephanie C.Y. Chan](https://scychan.github.io/)
 
 The evaluation of large language models (LLMs) relies heavily on standardized benchmarks. While these provide useful aggregated metrics, they can obscure particular sub-areas where LLMs are weak ("model gaps") and imbalanced coverage in the benchmarks themselves ("benchmark gaps"). This paper proposes a method called **Competency Gaps (CG)**, which uses sparse autoencoders (SAEs) to automatically uncover both types of gaps. By extracting SAE concept activations and computing saliency-weighted performance scores, our method grounds evaluation in the model's internal representations and enables comparison across models and benchmarks. We apply this method to popular open-source models and diverse benchmarks, uncovering meaningful imbalances. Our findings show that popular benchmarks often miss concepts central to their intended scope (e.g., logical or social reasoning) while over-representing concepts related to authority and instruction-following. The method also automatically surfaces model weaknesses anecdotally noted in prior work (e.g., reasoning with time, palindromes, and arithmetic), enabling developers to identify and address shortcomings in how model capabilities are currently assessed.
 

@@ -2,75 +2,13 @@
 
 #### [Maty Bohacek](https://www.matybohacek.com), [Nino Scherrer](https://ninodimontalcino.github.io), [Nicholas Dufour](), [Thomas Leung](), [Christoph Bregler](), [Stephanie C.Y. Chan](https://scychan.github.io/)
 
-The evaluation of large language models (LLMs) relies heavily on standardized benchmarks. While these provide useful aggregated metrics, they can obscure particular sub-areas where LLMs are weak ("model gaps") and imbalanced coverage in the benchmarks themselves ("benchmark gaps"). This paper proposes a method called **Competency Gaps (CG)**, which uses sparse autoencoders (SAEs) to automatically uncover both types of gaps. By extracting SAE concept activations and computing saliency-weighted performance scores, our method grounds evaluation in the model's internal representations and enables comparison across models and benchmarks. We apply this method to popular open-source models and diverse benchmarks, uncovering meaningful imbalances. Our findings show that popular benchmarks often miss concepts central to their intended scope (e.g., logical or social reasoning) while over-representing concepts related to authority and instruction-following. The method also automatically surfaces model weaknesses anecdotally noted in prior work (e.g., reasoning with time, palindromes, and arithmetic), enabling developers to identify and address shortcomings in how model capabilities are currently assessed.
+The evaluation of large language models (LLMs) relies heavily on standardized benchmarks. These benchmarks provide useful aggregated metrics for a given capability, but those aggregated metrics can obscure (i) particular sub-areas where the LLMs are weak ("model gaps") and (ii) imbalanced coverage in the benchmarks themselves ("benchmark gaps"). We propose a new method that uses sparse autoencoders (SAEs) to automatically uncover both types of gaps. By extracting SAE concept activations and computing saliency-weighted performance scores across benchmark data, the method grounds evaluation in the model's internal representations and enables comparison across benchmarks. As examples demonstrating our approach, we applied the method to two popular open-source models and ten benchmarks. We found that these models consistently underperformed on concepts that stand in contrast to sycophantic behaviors (e.g., politely refusing a request or asserting boundaries) and concepts connected to safety discussions. These model gaps align with observations previously surfaced in the literature; our automated, unsupervised method was able to recover them without manual supervision. We also observed benchmark gaps: many of the evaluated benchmarks over-represented concepts related to obedience, authority, or instruction-following, while missing core concepts that should fall within their intended scope. In sum, our method offers a representation-grounded approach to evaluation, enabling concept-level decomposition of benchmark scores. Rather than replacing conventional aggregated metrics, CG complements them by providing a concept-level decomposition that can reveal why a model scored as it did and how benchmarks could evolve to better reflect their intended scope.
 
-> [Website](TBD) — [Paper](TBD) — [Contact us](mailto:email@example.com)
+> Website — [Paper](TBD) — [Contact us](mailto:email@example.com)
 >
 > *Under review*
 
-## Modules
-
-This repository is organized into three main modules. To replicate our analysis or apply it to a new model, please use them in the order presented.
-
-### 1. Competency Gap (CG) Calculation
-
-This module contains the core implementation of our SAE-based method. It includes scripts to process benchmark data, extract concept activations, and compute the final benchmark gap and model gap scores as described in the paper.
-
-### 2. Gap Analysis & Visualization
-
-This module includes a collection of notebooks and scripts for analyzing the results from the first module. It allows you to identify over/underrepresented concepts, find the best/worst performing concepts for a model, and generate the plots and tables presented in our paper.
-
-### 3. Interactive Exploratory Tool
-
-We provide the source code for the web-based exploratory tool that allows for interactive inspection of benchmark coverage and model performance on a per-concept basis. This tool was used to surface many of the qualitative insights in our work.
-
-## Getting Started
-
-To get started, clone the repository and set up the required environment. We recommend using Python 3.10.
-
-```shell
-git clone [https://github.com/your-username/competency-gaps.git](https://github.com/your-username/competency-gaps.git)
-cd competency-gaps
-pip install -r requirements.txt
-```
-
-Follow the documentation within each module to run the analysis pipeline. You can start with the [Competency Gap Calculation](cg_calculation/) module.
-
-## Reproducing Paper Results
-
-To reproduce the results from our paper, you will need the models, SAEs, and benchmark datasets used in our experiments.
-
-<details>
-<summary><b>Models & Sparse Autoencoders (SAEs)</b></summary>
-
-* **Llama3.1-8B-Instruct** with the [Goodfire SAE](https://huggingface.co/Goodfire/sae-llama3.1-8b-instruct-layer-19) (Layer 19)
-* **Gemma2-2B-Instruct** with the [Gemma Scope SAE](https://huggingface.co/google/gemma-2-2b-it-sae) (Layer 20, residual stream)
-
-</details>
-
-<details>
-<summary><b>Benchmarks</b></summary>
-
-Our analysis spans ten diverse benchmarks. Please refer to their official sources for access:
-
-* **Factuality:** [Natural Questions](https://ai.google.com/research/NaturalQuestions), [Vectara](https://github.com/vectara/hallucination-leaderboard)
-* **Math:** [GSM8K](https://github.com/openai/grade-school-math), [MATH](https://github.com/hendrycks/math)
-* **Reasoning:** [AGI Eval](https://github.com/microsoft/AGIEval), [LogicBench](https://github.com/google-research-datasets/LogicBench), [SocialIQA](https://maartens.page/socialiqa), [WinoGrande](https://winogrande.allenai.org/)
-* **Ethics & Bias:** [BBQ](https://github.com/nyu-mll/BBQ), [CrowS-Pairs](https://github.com/nyu-mll/crows-pairs)
-
-</details>
-
-<details>
-<summary><b>Pre-computed Data</b></summary>
-
-> We provide the pre-computed concept activations and performance scores for both models across all ten benchmarks to facilitate easier reproduction and extension of our work.
-
-| Model                  | Concept Activations | Gap Scores        | Web Tool Data     |
-| :--------------------- | :-----------------: | :---------------: | :---------------: |
-| Llama3.1-8B-Instruct   |  [↓ Download](TBD)  | [↓ Download](TBD) | [↓ Download](TBD) |
-| Gemma2-2B-Instruct     |  [↓ Download](TBD)  | [↓ Download](TBD) | [↓ Download](TBD) |
-
-</details>
+Code coming soon.
 
 ## Citation
 

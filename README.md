@@ -8,7 +8,7 @@ This repository contains the official implementation of Competency Gaps, a repre
 
 > Website — [Paper](https://competency-gaps.github.io/paper) — [Contact us](mailto:email@example.com)
 >
-> *Under review*
+> *Pre-print. Under review.*
 
 ## Getting Started
 

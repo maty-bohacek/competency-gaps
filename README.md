@@ -1,3 +1,5 @@
+<img width="1641" height="709" alt="comp-gaps-banner" src="https://github.com/user-attachments/assets/880b3b6b-bdac-4343-aef2-c474a4f1fb5d" />
+
 # Uncovering Competency Gaps in Large Language Models and Their Benchmarks
 
 #### [Maty Bohacek](https://www.matybohacek.com), [Nino Scherrer](https://ninodimontalcino.github.io), [Nicholas Dufour](), [Thomas Leung](), [Christoph Bregler](), [Stephanie C.Y. Chan](https://scychan.github.io/)

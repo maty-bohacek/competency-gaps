@@ -6,7 +6,7 @@
 
 This repository contains the official implementation of Competency Gaps, a representation-grounded evaluation method that uses sparse autoencoders (SAEs) to automatically surface both model gaps and benchmark gaps. The approach extracts SAE concepts and computes saliency-weighted performance scores to reveal why models succeed or fail and which concepts benchmarks over- or under-represent. Applied to multiple open-source LLMs and benchmarks, the method recovers known weaknesses without supervision.
 
-> Website — [Paper](TBD) — [Contact us](mailto:email@example.com)
+> Website — [Paper](https://competency-gaps.github.io/paper) — [Contact us](mailto:email@example.com)
 >
 > *Under review*
 

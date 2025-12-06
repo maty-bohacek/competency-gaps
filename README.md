@@ -2,7 +2,7 @@
 
 # Uncovering Competency Gaps in Large Language Models and Their Benchmarks
 
-#### [Maty Bohacek](https://www.matybohacek.com), [Nino Scherrer](https://ninodimontalcino.github.io), [Nicholas Dufour](), [Thomas Leung](), [Christoph Bregler](), [Stephanie C.Y. Chan](https://scychan.github.io/)
+#### [Maty Bohacek](https://www.matybohacek.com), [Nino Scherrer](https://ninodimontalcino.github.io), [Nicholas Dufour](https://scholar.google.com/citations?user=g42kJfIAAAAJ), [Thomas Leung](https://scholar.google.com/citations?user=sUK_w2QAAAAJ), [Christoph Bregler](https://chris.bregler.com), [Stephanie C.Y. Chan](https://scychan.github.io/)
 
 This repository contains the official implementation of Competency Gaps, a representation-grounded evaluation method that uses sparse autoencoders (SAEs) to automatically surface both model gaps and benchmark gaps. The approach extracts SAE concepts and computes saliency-weighted performance scores to reveal why models succeed or fail and which concepts benchmarks over- or under-represent. Applied to multiple open-source LLMs and benchmarks, the method recovers known weaknesses without supervision.
 
